@@ -20,8 +20,8 @@ export default {
   },
   async created () {
     try {
-      await applicationUserManager.signinRedirectCallback()
-        let user = await applicationUserManager.getUser()
+         await applicationUserManager.signinRedirectCallback()
+        let user = await applicationUserManager.getUser();
         console.log(user)
         this.$store.commit("saveToken", user.access_token);
         this.$router.push({name: 'home'})

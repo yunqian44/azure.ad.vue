@@ -14,7 +14,7 @@
             <span  @click="login">LoginId4</span>
             </template>
             <template v-else>
-            <span style="color: darkcyan;">{{ user.name }}</span>
+            <span style="color: darkcyan;">{{ user.family_name }}</span>
             <span  icon="person"></span>
             <span @click="logout">  退出</span>
             </template>
