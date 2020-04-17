@@ -21,10 +21,11 @@ export default {
   async created () {
     try {
          await applicationUserManager.signinRedirectCallback()
-        let user = await applicationUserManager.getUser();
-        console.log(user)
+        //let user = await applicationUserManager.getUser();
+        console.log(applicationUserManager)
         this.$store.commit("saveToken", user.access_token);
         this.$router.push({name: 'home'})
+        
     } catch (e) {
       console.log(e)
       this.$root.$emit('show-snackbar', { message: e })
